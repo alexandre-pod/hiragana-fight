@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hiragana Fight</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="manifest" href="manifest.json">
+</head>
+<body>
+<main>
+	<section id="menu" class="view menu">
+		<header>
+			<h1 alt="Hiragana Fight">ひらがなの戦い</h1>
+			<h2>( Hiragana Fight )</h2>
+		</header>
+		<p>
+			Bienvenue sur Hiragana Fight <br/>
+			Ce jeu vous permet d'apprendre l'alphabet
+			syllabaire japonais en vous amusant. <br/>
+			<br/>
+			Bonne partie !
+		</p>
+		<button id="levelsButton">Jouer</button>
+		<button id="alphabetButton">Alphabet</button>
+		<p>
+			Points : <br/>
+			+5 si réponse corecte <br/>
+			+1 si réponse correcte en moins de 3 tentatives <br/>
+			+100 si niveau réussi sans erreur
+		</p>
+		<!-- <button id="bestScoresButton">Best Scores</button> -->
+	</section>
+
+	<section id="quizz" class="view quizz hidden">
+		<button class="back_menu_btn">menu</button>
+		<p class="niveau">Niveau <span id="levelNumber">0</span></p>
+		
+		<div class="caracterreDiv">
+			<p src="#" class="caractereGame" id="caractereGame"></p>
+			<p class="solution" id="solutionGame">solution</p>
+		</div>
+
+		<p class="points">Points : <span id="pointNumber">0</span></p>
+		<ul id="responses" class="reponses">
+			<li class="reponse"><button></button></li><!-- 
+		 --><li class="reponse"><button></button></li><!-- 
+		 --><li class="reponse"><button></button></li><!-- 
+		 --><li class="reponse"><button></button></li><!-- 
+		 --><li class="reponse"><button></button></li>
+		</ul>
+	</section>
+
+	<section id="levelsList" class="view levels_list hidden">
+		<button class="back_menu_btn">menu</button>
+		<ol>
+			<li class="level_btn" data-level="0" tabindex="0">Niveau 0 (<span class="highscore">0</span>/125)</li>
+			<li class="level_btn" data-level="1" tabindex="0">Niveau 1 (<span class="highscore">0</span>/125)</li>
+			<li class="level_btn" data-level="2" tabindex="0">Niveau 2 (<span class="highscore">0</span>/125)</li>
+			<li class="level_btn" data-level="3" tabindex="0">Niveau 3 (<span class="highscore">0</span>/125)</li>
+			<li class="level_btn" data-level="4" tabindex="0">Niveau 4 (<span class="highscore">0</span>/125)</li>
+			<li class="level_btn" data-level="5" tabindex="0">Niveau 5 (<span class="highscore">0</span>/125)</li>
+			<li class="level_btn" data-level="6" tabindex="0">Niveau 6 (<span class="highscore">0</span>/125)</li>
+			<li class="level_btn" data-level="7" tabindex="0">Niveau 7 (<span class="highscore">0</span>/125)</li>
+			<li class="level_btn" data-level="8" tabindex="0">Niveau 8 (<span class="highscore">0</span>/125)</li>
+			<li class="level_btn" data-level="9" tabindex="0">Niveau 9 (<span class="highscore">0</span>/125)</li>
+		</ol>
+	</section>
+
+	<section id="scoreView" class="view scores hidden">
+		<p>Level <span id="levelNumber">_</span></p>
+
+		<p>Score : <span id="scoreNumber" class="score">_</span></p>
+		<button id="retryButton">Recommencer</button>
+		<button id="menuButton">Menu</button>
+		<button id="nextButton">Niveau suivant</button>
+	</section>
+
+	<section id="alphabet" class="view alphabet hidden">
+		<button class="back_menu_btn">menu</button>
+		<table>
+			<caption>Alphabet sylabique Japonais</caption>
+			<tbody>
+				<tr>
+					<td>a: あ</td>
+					<td>i: い</td>
+					<td>u: う</td>
+					<td>e: え</td>
+					<td>o: お</td>
+				</tr>
+				<tr>
+					<td>ka: か</td>
+					<td>ki: き</td>
+					<td>ku: く</td>
+					<td>ke: け</td>
+					<td>ko: こ</td>
+				</tr>
+				<tr>
+					<td>sa: さ</td>
+					<td>shi: し</td>
+					<td>su: す</td>
+					<td>se: せ</td>
+					<td>so: そ</td>
+				</tr>
+				<tr>
+					<td>ta: た</td>
+					<td>chi: ち</td>
+					<td>tsu: つ</td>
+					<td>te: て</td>
+					<td>to: と</td>
+				</tr>
+				<tr>
+					<td>na: な</td>
+					<td>ni: に</td>
+					<td>nu: ぬ</td>
+					<td>ne: ね</td>
+					<td>no: の</td>
+				</tr>
+				<tr>
+					<td>ha: は</td>
+					<td>hi: ひ</td>
+					<td>fu: ふ</td>
+					<td>he: へ</td>
+					<td>ho: ほ</td>
+				</tr>
+				<tr>
+					<td>ma: ま</td>
+					<td>mi: み</td>
+					<td>mu: む</td>
+					<td>me: め</td>
+					<td>mo: も</td>
+				</tr>
+				<tr>
+					<td>ya: や</td>
+					<td></td>
+					<td>yu: ゆ</td>
+					<td></td>
+					<td>yo: よ</td>
+				</tr>
+				<tr>
+					<td>ra: ら</td>
+					<td>ri: り</td>
+					<td>ru: る</td>
+					<td>re: れ</td>
+					<td>ro: ろ</td>
+				</tr>
+				<tr>
+					<td>wa: わ</td>
+					<td></td>
+					<td></td>
+					<td>wo: を</td>
+					<td>n: ん</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+</main>
+<script src="script.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker
+			.register('/hiragana-fight/sw.js', { scope: '/hiragana-fight/' })
+			.then(function(reg) {
+			// suivre l'état de l'enregistrement du Service Worker : `installing`, `waiting`, `active`
+			});
+	}
+</script>
+</body>
+</html>

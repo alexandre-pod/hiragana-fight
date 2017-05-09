@@ -1,0 +1,246 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #EEEEEE;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom:0;
+}
+
+main {
+	/*width: 320px;
+	height: 480px;*/
+	max-width: 500px;
+	height: 100%;
+	margin: 0 auto;
+
+	background-color: white;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.view {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+
+	position: relative;
+}
+
+.view.hidden {
+	display: none;
+}
+
+/* ---------------- GLOBAL ------------------*/
+
+.back_menu_btn {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	padding: 5px;
+}
+
+/* ------------ FIN GLOBAL ------------------*/
+
+/* ------------------ MENU ------------------*/
+.menu {
+	text-align: center;
+}
+
+.menu *{
+	margin-bottom: 20px;
+}
+
+.menu header {
+	width: 100%;
+	height: 80px;
+}
+
+.menu header h1 {
+	font-size: 40px;
+	margin: 0;
+}
+
+.menu header h2 {
+	font-size: 15px;
+	color: #999;
+}
+
+.menu p {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 18px;
+}
+
+.menu button {
+	font-size: 30px;
+	width: 60%;
+	background-color: white;
+	border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.menu button:active {
+	padding: 10px auto;
+	background-color: #888;
+}
+
+
+/* -------------- FIN MENU ------------------*/
+
+/* ----------------- QUIZZ ------------------*/
+.quizz {
+	text-align: center;
+}
+
+.quizz .niveau {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.quizz .caracterreDiv {
+	position: absolute;
+	top: 44px;
+	bottom: 120px;
+	left: 0;
+	right:0;
+}
+
+.caracterreDiv .caractereGame {
+	font-size: 250px;
+	position: absolute;
+	top: 50%; left: 50%;
+	-ms-transform: translateY(-50%) translateX(-50%);
+	    transform: translateY(-50%) translateX(-50%);
+}
+
+.caracterreDiv .solution {
+	display: none;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	    transform: translateY(-50%);
+	padding: 10px;
+	
+	background-color: white;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+	border-radius: 15px;
+}
+
+.caracterreDiv .solution.visible {
+	display: inline-block;
+}
+
+.quizz .points {
+	position: absolute;
+	bottom: 90px;
+	left: 10px;
+	font-size: 16px;
+}
+
+.quizz .reponses {
+	list-style: none;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+
+	height: 80px;
+}
+
+.reponses .reponse {
+	display: inline-block;
+	width: 20%;
+	height: 100%;
+	vertical-align: top;
+	border: 1px solid grey;
+}
+
+.reponses .reponse button {
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	border: none;
+}
+
+.reponses .reponse button:active {
+	background-color: #BBB;
+}
+
+/* ------------- FIN QUIZZ ------------------*/
+
+/* ----------------- SCORE ------------------*/
+.scores {
+	text-align: center;
+}
+
+.scores p {
+	margin: 40px;
+}
+
+.scores .score.high::after {
+	content: "new high";
+	color: red;
+	position: relative;
+	top: -10px;
+	font-size: 50%;
+}
+
+.scores button {
+	padding: 10px;
+	margin: 10px auto;
+	width: 50%;
+	display: block;
+}
+
+/* ------------- FIN SCORE ------------------*/
+
+/* ---------------- LEVELS ------------------*/
+
+.levels_list ol {
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 40px;
+	text-align: center;
+	list-style: none;
+}
+
+.levels_list .level_btn {
+	margin: 3px;
+	padding: 8px;
+	border: 1px solid black;
+}
+
+.levels_list .level_btn:active {
+	background-color: grey;
+	color: white;
+}
+.levels_list .level_btn:hover {
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+	background-color: #CCC;
+}
+
+/* ------------ FIN LEVELS ------------------*/
+
+/* -------------- ALPHABET ------------------*/
+
+.alphabet table {
+	margin: 3% auto;
+	width: 80%;
+	height: 80%;
+}
+
+.alphabet td {
+	text-align: center;
+}
+
+/* ---------- FIN ALPHABET ------------------*/

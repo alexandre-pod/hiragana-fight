@@ -1,0 +1,17 @@
+{
+  "short_name": "Hiragana Fight",
+  "name": "Hiragana Fight",
+  "lang": "fr-FR",
+  "icons": [
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "500x500"
+    }
+  ],
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#2196F3",
+  "theme_color": "#2196F3",
+  "start_url": "index.html"
+}
